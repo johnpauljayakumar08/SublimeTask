@@ -1,29 +1,391 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import '~antd/dist/antd.css';
+@font-face {
+    font-family: "ChelseaMarket-Regular";
+    src: url("./fonts/chelsea_market/ChelseaMarket-Regular.ttf"); }
+  @font-face {
+    font-family: "Muli-Regular";
+    src: url("./fonts/muli/Muli-Regular.ttf"); }
+  @font-face {
+    font-family: "Muli-SemiBold";
+    src: url("./fonts/muli/Muli-SemiBold.ttf"); }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  #main{
+    font-family: "Muli-Regular";
+    font-size: 15px;
+    margin: 0;
+    color:white;
+    width: -300%;
+    margin-top: -90px;
+    
+   
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ }
+ #loginmain{
+  font-family: "Muli-Regular";
+  font-size: 15px;
+  margin: 0;
+  color:white;
+  width: -300%;
+  height: 100vh;
+  /* margin-top: 90%; */
+ }
+ 
+
+  input, textarea, select, button {
+    font-family: "Muli-SemiBold"; }
+  
+  p, h1, h2, h3, h4, h5, h6, ul {
+    margin: 0; }
+  
+  img {
+    max-width: 100%; }
+  
+  ul {
+    padding-left: 0;
+    margin-bottom: 0; }
+  
+  a {
+    text-decoration: none; }
+  
+  :focus {
+    outline: none; }
+
+  
+  
+  #wrapper {
+    height: 50%;
+    display: flex;
+    width: 150%;
+    margin-left: -55px;
+    
+    
+ }
+    #wrapper #image-holder {
+      width: 60%; }
+      #wrapper #image-holder1 {
+        width: 60%; }
+    #wrapper #form-inner {
+      width: 80%; }
+  
+  #image-holder {
+    background: url("./images/Sign up-amico.png") no-repeat;
+    background-position: center;
+    background-size: 100%; 
+}
+    #image-holder img {
+      display: none; }
+      #image-holder1 {
+        background: url("./images/Tablet login-bro.png") no-repeat;
+        background-position: center;
+        background-size: 100%; 
+    }
+        #image-holder1 img {
+          display: none; }
+  #form-inner {
+    /* background: #7858ec; */
+    color: #fd677a;
+    padding-top: 16.36vh;
+    padding-left: 4vw;
+    padding-right: 4vw; }
+  
+  form {
+    width: 100%; }
+  
+  #form-header {
+    text-align: center;
+    margin-bottom: 39px; }
+  
+  h3 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: "ChelseaMarket-Regular"; }
+  
+  label {
+    margin-bottom: 11px;
+    display: block; }
+  
+  #form-group {
+    margin-bottom: 26px;
+    position: relative; }
+  #form-group i{
+      position: absolute;
   }
+  .icon {
+    padding: 10px;
+    min-width: 60px;
+}
+#form-group input{
+  padding-left: 6%;
+}
+#form-group input::placeholder { 
+  padding: 6%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  #form-control {
+    border: 1px solid rgba(156, 87, 247, 0.5);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: none;
+    padding: 0 19px;
+    color: rgb(10, 10, 10);
+    font-size: 17px; }
+    #form-control#error {
+      border-color: #fd677a !important;
+      background: url("./images/error.png") no-repeat center right 19px; }
+    #form-control#valid {
+      background: url("./images/valid.png") no-repeat center right 19px; }
+  
+  #form-error {
+    margin-top: 10px;
+    display: inline-block; }
+  
+  button {
+    border: none;
+    width: 30%;
+    height: 46px;
+    border-radius: 22.5px;
+    margin: auto;
+    margin-top: 40px;
+    cursor: pointer;
+    /* display: flex; */
+    align-items: left;
+    justify-content: left;
+    padding: 0;
+    background: #ff97a4;
+    color: #fcf5f6;
+    text-transform: uppercase;
+    font-size: 17px;
+    overflow: hidden;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s; }
+    button:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fd677a;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 50%;
+      transform-origin: 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out; }
+    button:hover {
+      color: white; }
+      button:hover:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1); }
+    #btn{
+        display: inline-block;
+        margin-left: 40px;
+    }
+  
+  #socials {
+    text-align: center;
+    margin-top: 59px; }
+  
+  #socials-icon {
+    display: inline-flex;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 19px;
+    color: rgb(88, 85, 250);
+    transition: all 0.5s ease;
+    margin-right: 19px; }
+    #socials-icon:hover {
+      background: #ff97a4;
+      border: 1px solid transparent;
+      color: #ff97a4; }
+    #socials-icon:last-child {
+      margin-right: 0; }
+  
+  p {
+    font-family: "Muli-SemiBold";
+    /* color: #f1f12d; */
+    margin-bottom: 22px; }
+  
+  @media (max-width: 1500px) {
+    #form-inner {
+      display: flex;
+      align-items: center;
+      padding-top: 0;
+      padding-left: 4vw;
+      padding-right: 4vw; } }
+  @media (max-width: 1199px) {
+    #wrapper {
+      flex-direction: column; }
+      #wrapper #image-holder {
+        width: 100%;
+        height: 45vh; }
+        #wrapper #image-holder1 {
+          width: 100%;
+          height: 45vh; }
+      #wrapper #form-inner {
+        width: 100%;
+        height: 55vh; }
+  
+    #form-inner {
+      padding-left: 20vw;
+      padding-right: 20vw; }
+  
+    button {
+      width: 50%; } }
+  @media (max-width: 991px) {
+    #wrapper #image-holder {
+      height: 37vh; }
+      #wrapper #image-holder1 {
+        height: 37vh; }
+    #wrapper #form-inner {
+      height: 63vh; }
+  
+    #socials {
+      margin-top: 40px; }
+  
+    #form-header {
+      margin-bottom: 30px; } }
+  @media (max-width: 767px) {
+    #wrapper #form-inner {
+      height: auto; }
+    #wrapper #image-holder {
+      height: auto; }
+      #wrapper #image-holder1 {
+        height: auto; }
+    #image-holder img {
+      display: block; }
+      #image-holder1 img {
+        display: block; }
+    #form-inner {
+      padding: 30px 20px; }
+  
+    button {
+      width: 100%; } }
+
+  /* profile page css */
+#homediv{
+  color: #6F8BA4;
+  margin-top:20px; 
+  width: 100%;
+  height: 100vh;
+}
+.section {
+  padding: 100px 0;
+  position: relative;
+  width: 100%;
+}
+.gray-bg {
+  background-color: #f5f5f5;
+}
+img {
+  max-width: 100%;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+.container{
+  width: 80%;
+}
+/* About Me 
+---------------------*/
+.about-text h3 {
+font-size: 35px;
+font-weight: 700;
+margin: 0 0 6px;
+}
+@media (max-width: 767px) {
+.about-text h3 {
+  font-size: 35px;
+}
+}
+.about-text h6 {
+font-weight: 600;
+margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+.about-text h6 {
+  font-size: 18px;
+}
+}
+.about-text p {
+font-size: 18px;
+max-width: 450px;
+
+}
+.about-text p mark {
+font-weight: 600;
+color: #20247b;
 }
 
-.App-link {
-  color: #61dafb;
+.about-list {
+padding-top: 10px;
+}
+.about-list .media {
+padding: 5px 0;
+}
+.about-list label {
+color: #fd677a;
+font-weight: 600;
+width: 88px;
+margin: 0;
+position: relative;
+}
+
+.about-list p {
+margin: 0;
+font-size: 15px;
+
+}
+
+@media (max-width: 991px) {
+.about-avatar {
+  margin-top: 30px;
+}
+}
+
+
+mark {
+  background-image: linear-gradient(rgba(252, 83, 86, 0.6), rgba(252, 83, 86, 0.6));
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  background-color: transparent;
+  padding: 0;
+  color: currentColor;
+}
+.theme-color {
+  color: #fc5356;
+}
+.dark-color {
+  color: #20247b;
+}
+#logout{
+  margin-left: 300px;
+}
+/* profilepic */
+.profile-pic input{
+  display: none;
 }
